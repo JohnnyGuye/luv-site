@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <header>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Single+Day&display=swap" rel="stylesheet">
+    <link href="assets/style.css" rel="stylesheet" />
+    <script src="assets/luv.js"></script>
+  </header>
+  <body>
+    <section class="page-container" id="luvcontainer">
+      <div class="main-content" id="asking-block">
+        <img src="assets/image/cute_asking_bear.jpg" class="love-img"/>
+        <br/>
+        <div>
+          <button class="button is-yes" onclick="yessss()">
+            Yes &lt;3 &lt;3
+          </button>
+          <button class="button is-no hidden" id="placeholder-button">
+            Nope...
+          </button>
+        </div>
+      </div>
+
+      <div class="main-content" id="yes-block" style="display: none;">
+        <img src="assets/image/cute_huggin_bear.jpg" class="love-img"/>
+        <p>Yeyyyy! &lt;3</p>
+      </div>
+
+      <div id="noButton">
+        <button class="button is-no">
+          Nope...
+        </button>
+      </div>
+
+
+    </section>
+  </body>
+  <script>
+    const luv = new Luv().start()
+    function yessss() {
+      const aBlock = document.getElementById("asking-block")
+      const yBlock = document.getElementById("yes-block")
+      const nButton = document.getElementById("noButton")
+
+      aBlock.style.display = "none";
+      nButton.style.display = "none"
+      yBlock.style.display = "flex";
+    }
+  </script>
+</html>
